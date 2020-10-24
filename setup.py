@@ -15,6 +15,13 @@ setuptools.setup(
     include_package_data=True,
     entry_points={"console_scripts": ["calculator = calculator.main:main"]},
     python_requires=">=3.6",
-    install_requires=["pandas>=1.0.0"],
-    extra_require={"dev": ["pytest"]},
+    install_requires=[
+        "pandas>=1.0.0",
+        "pytest",
+    ],
+    extra_require={
+        "dev": [
+            "pytest=6.1.1",
+        ]
+    },
 )
