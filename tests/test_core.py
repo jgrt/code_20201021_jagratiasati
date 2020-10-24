@@ -71,20 +71,23 @@ def test_generate_summary(base_path, config):
     assert summary.get("bmi_category_counts") == category_count
 
 
-def test_write_output_invalid_format():
+def test_write_output_invalid_format(tmpdir):
+    test = tmpdir.mkdir("temp").join("test.json")
     data = dict(a=[1, 2, 3], b=["a", "b", "c"])
 
     with pytest.raises(FileIOError) as fe:
-        write_output(data, "test.json")
+        write_output(data, test)
 
     assert fe.value.args[0] == "Unable to write file."
 
 
-def test_write_summary_invalid_format():
+def test_write_summary_invalid_format(tmpdir):
+    test = tmpdir.mkdir("temp").join("test.json")
+
     data = pd.DataFrame([[1, 2, 3], ["a", "b", "c"]])
 
     with pytest.raises(FileIOError) as fe:
-        write_summary(data, "test.json")
+        write_summary(data, test)
 
     assert fe.value.args[0] == "Unable to write file."
 

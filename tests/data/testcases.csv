@@ -1,0 +1,38 @@
+Gender,WeightKg,HeightCm,Description
+Female,64,191,"Underweight, Malnutrition risk"
+Female,92,193,"Normal weight, Low risk"
+Male,106,190,"Overweight, Enhanced risk"
+Male,86,162,"Moderately obese, Medium risk"
+Male,102,163,"Severely obese, High risk"
+Female,105,150,"Very severely obese, Very high risk"
+Male,0,155,"weight is zero, not applicable"
+Male,,156,"weight is empty, not applicable"
+Male,0,0,weight and height are zero
+Male,,,weight and height are empty
+Female,75,0,"Height is zero, not applicable"
+Male,81,,"Height is empty, not applicable"
+Female,-53,164,negative weight
+Female,94,-176,height is negative
+Female,-64,-183,both are negative
+Female,-83,0,weight is negative and height is zero
+Male,0,-179,height is negative and weight is zero
+Female,-53,,weight is negative and height is empty
+Male,,-185,height is negative and height is empty
+Female,abc,155,weight is str
+Female,dfg,-185,weight is str and height is negative
+Male,oiuyt,0,weight is str and height is zero
+Female,dfgh,,weight is str and height is empty
+Male,81,qwer,height is str
+Female,-86,bhj,Height is str and weight is negative
+Female,0,kliji,Height is str and weight is zero
+Male,,180,Height is str and weight is empty
+Male,jnijihoi,vuyhguyh,both are str
+Male,56,186,weight is int str
+Female,97,172,height is int str
+Female,85,194,both are int str
+Female,90,0,"weight is int str, height is zero"
+Female,70,,"weight is int str, height is empty"
+Female,103,-158,"weight is int str, height is negative"
+Male,0,159,"height is int str, weight is zero"
+Male,,160,"height is int str, weight is empty"
+Female,-107,161,"height is int str, weight is negative"
