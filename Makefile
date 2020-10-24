@@ -1,7 +1,7 @@
 .PHONY: all prepare-dev venv lint test run shell clean build install docker
 SHELL=/bin/bash
 
-VENV_NAME?=vamstar
+VENV_NAME?=test_venv
 VENV_BIN=$(shell pwd)/${VENV_NAME}/bin
 VENV_ACTIVATE=. ${VENV_BIN}/activate
 
@@ -15,7 +15,7 @@ all:
 	@echo "    Run tests on project."
 
 
-prepare-env:
+install:
 
 	which python3 || apt install -y python3 python3-pip
 	which virtualenv || python3 -m pip install virtualenv
@@ -27,7 +27,7 @@ $(VENV_NAME)/bin/activate: setup.py
 
 	test -d $(VENV_NAME) || virtualenv -p python3 $(VENV_NAME)
 	${PYTHON} -m pip install -U pip setuptools
-	${PYTHON} -m pip install -e .[dev]
+	${PYTHON} -m pip install -e .
 	touch $(VENV_NAME)/bin/activate
 
 
