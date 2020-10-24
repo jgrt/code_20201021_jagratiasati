@@ -1,0 +1,3 @@
+.pytest_cache
+./cov_html
+/.coverage
